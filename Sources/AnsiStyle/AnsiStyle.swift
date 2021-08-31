@@ -53,7 +53,7 @@ public extension String {
         public let rawValue: Int
         
         public static let bold      = Self(rawValue: 1 << 0)
-        public static let thin      = Self(rawValue: 1 << 1)
+        public static let dim       = Self(rawValue: 1 << 1)
         public static let italic    = Self(rawValue: 1 << 2)
         public static let underline = Self(rawValue: 1 << 3)
         public static let blink     = Self(rawValue: 1 << 4)
@@ -100,7 +100,7 @@ private extension String.AnsiStyle {
         var codes: [Int] = []
         
         if self.contains(.bold)      { codes.append(1) }
-        if self.contains(.thin)      { codes.append(2) }
+        if self.contains(.dim)       { codes.append(2) }
         if self.contains(.italic)    { codes.append(3) }
         if self.contains(.underline) { codes.append(4) }
         if self.contains(.blink)     { codes.append(5) }
