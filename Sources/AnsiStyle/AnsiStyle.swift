@@ -52,22 +52,22 @@ public extension String {
         
         public let rawValue: Int
         
-        public static let bold      = Self(rawValue: 1 << 0)
-        public static let dim       = Self(rawValue: 1 << 1)
-        public static let italic    = Self(rawValue: 1 << 2)
-        public static let underline = Self(rawValue: 1 << 3)
-        public static let blink     = Self(rawValue: 1 << 4)
-        public static let inverse   = Self(rawValue: 1 << 5)
-        public static let hide      = Self(rawValue: 1 << 6)
+        public static let bold      = Self(rawValue: 1 << 1)
+        public static let dim       = Self(rawValue: 1 << 2)
+        public static let italic    = Self(rawValue: 1 << 3)
+        public static let underline = Self(rawValue: 1 << 4)
+        public static let blink     = Self(rawValue: 1 << 5)
+        public static let inverse   = Self(rawValue: 1 << 7)
+        public static let hide      = Self(rawValue: 1 << 8)
         
-        public static let black     = Self(rawValue: 1 << 7)
-        public static let red       = Self(rawValue: 1 << 8)
-        public static let green     = Self(rawValue: 1 << 9)
-        public static let yellow    = Self(rawValue: 1 << 10)
-        public static let blue      = Self(rawValue: 1 << 11)
-        public static let magenta   = Self(rawValue: 1 << 12)
-        public static let cyan      = Self(rawValue: 1 << 13)
-        public static let white     = Self(rawValue: 1 << 14)
+        public static let black     = Self(rawValue: 1 << 30)
+        public static let red       = Self(rawValue: 1 << 31)
+        public static let green     = Self(rawValue: 1 << 32)
+        public static let yellow    = Self(rawValue: 1 << 33)
+        public static let blue      = Self(rawValue: 1 << 34)
+        public static let magenta   = Self(rawValue: 1 << 35)
+        public static let cyan      = Self(rawValue: 1 << 36)
+        public static let white     = Self(rawValue: 1 << 37)
         
         
         public init(rawValue: Int) {
@@ -98,26 +98,7 @@ private extension String.AnsiStyle {
         
         if self == .reset { return [0] }
         
-        var codes: [Int] = []
-        
-        if self.contains(.bold)      { codes.append(1) }
-        if self.contains(.dim)       { codes.append(2) }
-        if self.contains(.italic)    { codes.append(3) }
-        if self.contains(.underline) { codes.append(4) }
-        if self.contains(.blink)     { codes.append(5) }
-        if self.contains(.inverse)   { codes.append(7) }
-        if self.contains(.hide)      { codes.append(8) }
-        
-        if self.contains(.black)     { codes.append(30) }
-        if self.contains(.red)       { codes.append(31) }
-        if self.contains(.green)     { codes.append(32) }
-        if self.contains(.yellow)    { codes.append(33) }
-        if self.contains(.blue)      { codes.append(34) }
-        if self.contains(.magenta)   { codes.append(35) }
-        if self.contains(.cyan)      { codes.append(36) }
-        if self.contains(.white)     { codes.append(37) }
-        
-        return codes
+        return (1...37).filter { self.rawValue & (1 << $0) != 0 }
     }
     
 }
