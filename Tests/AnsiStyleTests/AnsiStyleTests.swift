@@ -34,7 +34,9 @@ import XCTest
 
 final class AnsiStyleTests: XCTestCase {
     
-    func testExample() {
+    func testStyledTexts() {
         
+        XCTAssertEqual("moof".ansiStyled([.bold, .underline, .green]), "\u{001B}[1;4;32mmoof\u{001B}[0m")
+        XCTAssertEqual("moof".ansiStyled([]), "moof")
     }
 }
