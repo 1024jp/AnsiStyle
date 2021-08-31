@@ -52,12 +52,12 @@ public extension String {
         
         public let rawValue: Int
         
-        public static let bold          = Self(rawValue: 1 << 0)
-        public static let thin          = Self(rawValue: 1 << 1)
-        public static let italic        = Self(rawValue: 1 << 2)
-        public static let underline     = Self(rawValue: 1 << 3)
-        public static let blink         = Self(rawValue: 1 << 4)
-        public static let inverse       = Self(rawValue: 1 << 5)
+        public static let bold      = Self(rawValue: 1 << 0)
+        public static let thin      = Self(rawValue: 1 << 1)
+        public static let italic    = Self(rawValue: 1 << 2)
+        public static let underline = Self(rawValue: 1 << 3)
+        public static let blink     = Self(rawValue: 1 << 4)
+        public static let inverse   = Self(rawValue: 1 << 5)
         
         public static let black     = Self(rawValue: 1 << 7)
         public static let red       = Self(rawValue: 1 << 8)
