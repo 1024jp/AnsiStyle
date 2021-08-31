@@ -1,3 +1,3 @@
 # AnsiStyle
 
-A description of this package.
+A small library to style strings for the standard output.
