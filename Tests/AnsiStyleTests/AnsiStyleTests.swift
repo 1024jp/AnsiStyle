@@ -1,6 +1,6 @@
 //
 //  AnsiStyleTests.swift
-//
+//  AnsiStyle
 //
 //  Created by 1024jp on 2021-08-31.
 //
@@ -39,4 +39,5 @@ final class AnsiStyleTests: XCTestCase {
         XCTAssertEqual("moof".ansiStyled([.bold, .underline, .green]), "\u{001B}[1;4;32mmoof\u{001B}[0m")
         XCTAssertEqual("moof".ansiStyled([]), "moof")
     }
+    
 }

@@ -1,6 +1,6 @@
 //
 //  AnsiStyle.swift
-//
+//  AnsiStyle
 //
 //  Created by 1024jp on 2021-08-30.
 //
