@@ -58,6 +58,7 @@ public extension String {
         public static let underline = Self(rawValue: 1 << 3)
         public static let blink     = Self(rawValue: 1 << 4)
         public static let inverse   = Self(rawValue: 1 << 5)
+        public static let hide      = Self(rawValue: 1 << 6)
         
         public static let black     = Self(rawValue: 1 << 7)
         public static let red       = Self(rawValue: 1 << 8)
@@ -105,6 +106,7 @@ private extension String.AnsiStyle {
         if self.contains(.underline) { codes.append(4) }
         if self.contains(.blink)     { codes.append(5) }
         if self.contains(.inverse)   { codes.append(7) }
+        if self.contains(.hide)      { codes.append(8) }
         
         if self.contains(.black)     { codes.append(30) }
         if self.contains(.red)       { codes.append(31) }

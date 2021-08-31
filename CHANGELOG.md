@@ -2,6 +2,7 @@
 
 ## 1.1.0 (unreleased)
 
+- [new] Add `.hide`.
 - [mod] Rename `.thin` to `.dim`.
 
 
