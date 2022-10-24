@@ -80,6 +80,13 @@ public extension String {
 }
 
 
+/// Flush last printed line.
+public func flushLast() {
+    
+    print("\u{1B}[A\u{1B}[K", terminator: "")
+}
+
+
 
 // MARK: Private
 
