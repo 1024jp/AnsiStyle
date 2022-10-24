@@ -8,7 +8,7 @@
 //
 //  The MIT License (MIT)
 //
-//  © 2021 1024jp
+//  © 2021-2022 1024jp
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -90,7 +90,7 @@ private extension String.AnsiStyle {
     
     var escapeSequence: String {
         
-        "\u{001B}[" + self.codes.map(String.init).joined(separator: ";") + "m"
+        "\u{1B}[" + self.codes.map(String.init).joined(separator: ";") + "m"
     }
     
     

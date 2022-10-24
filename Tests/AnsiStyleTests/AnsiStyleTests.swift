@@ -8,7 +8,7 @@
 //
 //  The MIT License (MIT)
 //
-//  © 2021 1024jp
+//  © 2021-2022 1024jp
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -36,7 +36,7 @@ final class AnsiStyleTests: XCTestCase {
     
     func testStyledTexts() {
         
-        XCTAssertEqual("moof".ansiStyled([.bold, .underline, .green]), "\u{001B}[1;4;32mmoof\u{001B}[0m")
+        XCTAssertEqual("moof".ansiStyled([.bold, .underline, .green]), "\u{1B}[1;4;32mmoof\u{1B}[0m")
         XCTAssertEqual("moof".ansiStyled([]), "moof")
     }
     
